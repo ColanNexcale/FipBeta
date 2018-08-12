@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">fip</string>
+    <string name="action_settings">Settings</string>
+    <string name="daySum">Tagessumme:</string>
+    <string name="daySumDefaultValue">00,00</string>
+    <string name="currency">€</string>
+    <string name="daySumCurrentDate">01.01.2000</string>
+    <string name="sendToServerBtn">An Server senden</string>
+    <string name="statusText">Statustext</string>
+    <string name="currentDate">01.01.2000</string>
+    <string name="inputDialogExpense">Euro:</string>
+    <string name="inputDialogNote">Notiz:</string>
+    <string name="inputHintNote"><font size="9">Was gekauft?</font></string>
+    <string name="inputHintAmount"><font size="9">Wieviel ausgegeben?</font></string>
+    <string name="inputButtonAdd">Hinzufügen</string>
+    <string name="inputButtonCancel">Abbrechen</string>
+    <string name="navigateDayNext">Vor</string>
+    <string name="navigateDayPrevious">Zurück</string>
+    <string name="title_activity_fip_tabbed_main">fipTabbedMain</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="daySumValue">00,00</string>
+    <string name="daySumDate">01.01.2000</string>
+    <string name="daySumLabel">Tagessumme</string>
+    <string name="date">01.01.2000</string>
+    <string name="tabOverview">Übersicht</string>
+    <string name="tabInspector">Details</string>
+    <string name="dayTotal">Gesamt: </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
