@@ -27,7 +27,7 @@ public class DateManager {
 
     void save(){
         saveDateList(dateList);
-        Toast.makeText(context, "Daylist saved", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(context, "Daylist saved", Toast.LENGTH_SHORT).show();
     }
 
 

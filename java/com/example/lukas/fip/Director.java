@@ -20,6 +20,7 @@ public class Director {
     private FipView fipView;
     private DayManager dayManager;
     private DateManager dateManager;
+    private MonthManager monthManager;
     private Day dayOverview, dayInspector;
     private Overview overviewFragment;
     private Inspector inspectorFragment;
@@ -36,6 +37,7 @@ public class Director {
         //init managers
         dateManager = new DateManager(context, date);
         dayManager = new DayManager(context, date);
+        monthManager = new MonthManager(context, dateManager.getDateList(), dayManager.getDayList());
 
         dayOverview = dayManager.getDay(date);
         dayInspector = dayManager.getDay(date);
@@ -67,6 +69,12 @@ public class Director {
         fipView.setDate(source, date);
         fipView.setDaySumDate(source, day.getDate());
         fipView.setDaySumValue(source, Float.toString(day.getDaySum()));
+
+        if (source.getClass() == Overview.class){
+            fipView.setMonthSum((Overview)source, Float.toString(monthManager.getMonthSum(day.getDate().split("\\.")[1])));
+            fipView.setMonth ((Overview)source, monthManager.getMonthName(day.getDate()));
+        }
+
         if (source.getClass() == Inspector.class)
             setDayDetails((Inspector)source, day, setFullDay);
     }
