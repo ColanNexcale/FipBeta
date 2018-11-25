@@ -29,7 +29,13 @@ public class FipView {
         source.setDaySumDate(date);
     }
 
+    void setMonthSum (OverviewInterface source, String monthSum ){
+        source.setMonthSum(monthSum);
+    }
 
+    void setMonth(OverviewInterface source, String month){
+        source.setMonth(month);
+    }
 
     void setDaySumValue(BasicUIInterface source, String value){
         source.setDaySumValue(value);

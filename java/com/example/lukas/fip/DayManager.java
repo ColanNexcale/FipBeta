@@ -43,6 +43,10 @@ public class DayManager {
        }
     }
 
+    HashMap<String, Day> getDayList(){
+        return dayList;
+    }
+
 
     Day getDay(String date){
         return dayList.get(date);
@@ -62,7 +66,7 @@ public class DayManager {
 
     public void save(){
         saveDays(parseDayListToString(dayList));
-        Toast.makeText(context, "Days saved", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(context, "Days saved", Toast.LENGTH_SHORT).show();
     }
 
 

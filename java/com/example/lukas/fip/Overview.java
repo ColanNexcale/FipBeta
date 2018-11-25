@@ -11,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class Overview extends Fragment implements BasicUIInterface {
+public class Overview extends Fragment implements OverviewInterface {
 
     private static final String TAG = "OverviewFragment";
 
@@ -19,7 +19,7 @@ public class Overview extends Fragment implements BasicUIInterface {
     private FipController fCon;
     private View view;
     private OverviewCompleteListener ocl;
-    private TextView dateView, daySumDateView, daySumValue;
+    private TextView dateView, daySumDateView, daySumValue, monthSum, monthLabel;
     private Fragment self;
 
 
@@ -39,6 +39,8 @@ public class Overview extends Fragment implements BasicUIInterface {
         dateView = ((TextView)view.findViewById(R.id.dateOverview));
         daySumDateView = ((TextView)view.findViewById(R.id.daySumDateOverview));
         daySumValue = ((TextView)view.findViewById(R.id.daySumValueOverview));
+        monthSum = ((TextView)view.findViewById(R.id.monthSumValueOverview));
+        monthLabel = ((TextView)view.findViewById(R.id.monthLabelOverview));
         self = this;
 
         nextDayBtn = (FloatingActionButton) view.findViewById(R.id.fabNextDayOverview);
@@ -96,6 +98,14 @@ public class Overview extends Fragment implements BasicUIInterface {
         daySumValue.setText(value);
     }
 
+    @Override
+    public void setMonthSum(String value){
+        monthSum.setText(value);
+    }
 
+    @Override
+    public void setMonth (String month){
+        monthLabel.setText(month);
+    }
 
 }
